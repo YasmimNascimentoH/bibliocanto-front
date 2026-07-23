@@ -20,8 +20,6 @@ export default function Login() {
       if (response.data && response.data.id) {
         loginUser(response.data);
         navigate('/dashboard');
-      } else {
-        setErro('Usuário não encontrado ou credenciais inválidas.');
       }
     } catch (error) {
       setErro('Erro ao autenticar: Usuário inexistente ou erro no servidor.');
